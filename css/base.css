@@ -176,6 +176,7 @@ section {
 
 .create-box{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
     .create-box p{
@@ -193,11 +194,12 @@ section {
         background-color: black;
         color: white;
         font-size: 16px;
+        text-align: center;
     }
 
 .pink-box{
     background-color: #f7e9e4;
-    height: 100vh;
+    height: fit-content;
 }
 
 /* footer */
@@ -249,6 +251,16 @@ footer {
     border: none;
     cursor: pointer;
 }
+
+.login-box input.radio{
+    width: 30px;
+}
+
+.login-box .select{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 .social.naver{
     width: 160px;
