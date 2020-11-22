@@ -156,6 +156,7 @@ section {
 #title{
     line-height: 70px;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .search{
@@ -194,6 +195,11 @@ section {
         font-size: 16px;
     }
 
+.pink-box{
+    background-color: #f7e9e4;
+    height: 100vh;
+}
+
 /* footer */
 
 footer {
@@ -209,4 +215,53 @@ footer {
     width: 50%;
     text-align: center;
     margin: 0 auto;
+}
+
+/* login */
+
+#login-wrapper{
+    width: 295px;
+    margin: 0 auto;
+}
+
+.login-box{
+    margin-bottom: 20px;
+}
+
+.login-box h3{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-box input{
+    padding: 10px;
+    width: 295px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.login-box input.submit{
+    width: 160px;
+    height: 40px;
+    background-color: #fbb9ab;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.social.naver{
+    width: 160px;
+    height: 40px;
+    color: white;
+    border: none;
+    background-color: #2DB400;
+    cursor: pointer;
+}
+
+.find a{
+    display: block;
+    color: #1979c3;
+    text-align: left;
+    margin-top: 10px;
 }
