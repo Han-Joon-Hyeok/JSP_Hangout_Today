@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘머해 : 실시간 취미 및 위치 기반 소모임 플랫폼</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <span class="icon big">🏃‍♂️</span>
+            <span>노는게 제일 좋아!</span>
+        </div>
+        <nav>
+            <div class="login">
+                <a href="#"><h2>로그인</h2></a>
+            </div>
+            <div id="line-wrapper">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="menu">
+                <a href="#"><span class="icon big">🏠</span>홈으로</a>
+                <a href="#"><span class="icon big">📄</span>마이페이지</a>
+                <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
+            </div>
+    </header>
+    <section>
+        <div id="main-wrapper">
+            <div id="title">
+                <h1>오늘머해?</h1>
+                <h3>취향 및 위치 기반 실시간 소모임</h3>
+            </div>
+            <div class="search-box">
+                <form action="" method="POST">
+                    <input type="text" name="search" class="search" placeholder="함께 하고 싶은 모임을 검색해보세요">
+                    <button type="submit" class="icon big">🔍</button>
+                </form>
+            </div>
+            <div class="create-box">
+                <p>원하는 모임이 없다면?</p>
+                <button class="black-btn" onclick="location.href='#'">모임 만들기</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">
+            Copyright ⓒ 오래다녔조 <br><br>
+            2020-2학기 [객체지향언어] 팀프로젝트 <br><br>
+            김영웅 송원준 한준혁
+        </p>
+    </footer>
+    <script src="js/base.js"></script>
 </body>
 </html>
