@@ -197,6 +197,10 @@ section {
         text-align: center;
     }
 
+    .black-btn a{
+        color: white;
+    }
+
 .pink-box{
     background-color: #f7e9e4;
     height: fit-content;
@@ -237,7 +241,7 @@ footer {
 
 .login-box input{
     padding: 10px;
-    width: 295px;
+    width: 275px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid black;
@@ -280,4 +284,26 @@ footer {
 
 input[readonly]{
     background-color:#999999;
+}
+
+.login-box input[readonly]::placeholder{
+    color: white;
+}
+
+/* mypage */
+
+table.white-table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+table.white-table td, table.white-table th{
+    border: 1px solid black;
+    padding: 5px 0;
+}
+
+table.white-table th{
+    background-color: #fbb9ab;
 }
