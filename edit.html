@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오늘머해 : 로그인</title>
+    <title>오늘머해 : 정보수정</title>
     <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
                 <div class="line"></div>
             </div>
             <div id="menu">
-                <a href="main.html"><span class="icon big">🏠</span>홈으로</a>
+                <a href="#"><span class="icon big">🏠</span>홈으로</a>
                 <a href="#"><span class="icon big">📄</span>마이페이지</a>
                 <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
             </div>
@@ -31,32 +31,44 @@
         <div id="main-wrapper" class="pink-box">
             <div id="login-wrapper">
                 <div id="title">
-                    <h1>로그인</h1>
+                    <h1>정보수정</h1>
                 </div>
                 <form action="" method="POST">
                     <div class="login-box">
                         <h3>아이디</h3>
-                        <input type="text" name="id" placeholder="ID">
+                        <input type="text" name="id" placeholder="ID" readonly>
                     </div>
                     <div class="login-box">
                         <h3>비밀번호</h3>
                         <input type="password" name="password" placeholder="PASSWORD">
                     </div>
                     <div class="login-box">
-                        <input type="submit" value="로그인" class="submit">
+                        <h3>성별</h3>
+                        <div class="select">
+                            <label><input type="radio" class="radio" value="male" name="sex" onclick="return(false)"> 🙋‍♂남</label>
+                            <label><input type="radio" class="radio" value="female" name="sex" onclick="return(false)">🙋여</label>
+                        </div>
                     </div>
                     <div class="login-box">
-                        <input type="submit" value="NAVER 소셜 로그인" class="social naver">
+                        <h3>생년월일</h3>
+                        <input type="date" name="birthdate" readonly>
+                    </div>
+                    <div class="login-box">
+                        <h3>Email</h3>
+                        <input type="email" name="email" placeholder="EMAIL" readonly>
+                    </div>
+                    <div class="login-box">
+                        <h3>지역</h3>
+                        <input type="text" name="address" placeholder="구 단위까지 입력">
+                    </div>
+                    <div class="login-box">
+                        <h3>관심사</h3>
+                        <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                    </div>
+                    <div class="create-box">
+                        <input type="submit" class="black-btn" value="가입하기">
                     </div>
                 </form>
-                <div class="find">
-                    <a href="#">아이디가 기억나지 않으시나요?</a>
-                    <a href="#">비밀번호 찾기</a>
-                </div>
-                <div class="create-box">
-                    <p>아직 회원이 아니라면?</p>
-                    <button class="black-btn" onclick="location.href='register.html'">회원가입</button>
-                </div>
             </div>
         </div>
     </section>

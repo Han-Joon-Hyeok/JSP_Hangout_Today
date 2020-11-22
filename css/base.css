@@ -176,7 +176,7 @@ section {
 
 .create-box{
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
     .create-box p{
@@ -276,4 +276,8 @@ footer {
     color: #1979c3;
     text-align: left;
     margin-top: 10px;
+}
+
+input[readonly]{
+    background-color:#999999;
 }
