@@ -357,6 +357,9 @@ section {
     line-height: 45px;
     box-shadow: 3px 3px 3px 2px #333333;
 }
+    #TOP_BTN:hover{
+        background-color: #e29acd;
+    }
 
 
 /* footer */
