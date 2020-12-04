@@ -149,31 +149,3 @@
     display: none;
 }
 
-div.item {
-    border: 1px black solid;
-    border-radius: 10px;
-    text-align: center;
-    width: 150px;
-    height: 220px;
-    padding: 50px 0;
-    line-height: 30px;
-}
-    .item .icon{
-        font-size: 32px;
-    }
-
-    .item h3{
-        font-size: 16px;
-        
-    }
-
-    .item h4{
-        font-size: 12px;
-        color: #555555;
-    }
-
-    .item p{
-        color: #ff0000;
-        font-size: 12px;
-    }
-
