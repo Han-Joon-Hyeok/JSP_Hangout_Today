@@ -590,6 +590,14 @@ a.off{
         top: -15px;
     }
 
+    .user-response .icon.like::before{
+        content: "🤍";
+    }
+
+    .user-response .checked::before{
+        content: "🧡";
+    }
+
     .user-response .user-area{
         display: inline-block;
     }
