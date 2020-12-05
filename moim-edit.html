@@ -43,12 +43,9 @@
                     <div class="title-left">
                         <h4>게시판 목록</h4>
                         <h5>
-                            <a href="moim.html" class="off">모임 게시판</a>
-                            <a href="review.html" class="selected">리뷰 게시판</a>
+                            <a href="moim.html" class="selected">모임 게시판</a>
+                            <a href="review.html" class="off">리뷰 게시판</a>
                         </h5>
-                    </div>
-                    <div class="title-right">
-                        <button class="map"><a href="#">✍ 리뷰 작성하기</a></button>
                     </div>
                 </div>
                 <div class="moim-wrapper">
@@ -61,19 +58,18 @@
                 </div>
                 <div class="category-list">
                     <div class="review">
-                        <div class="user-info">
-                            <div class="icon-area">
-                                <span class="icon">👱‍♂️</span>
-                            </div>
-                            <div class="user-area">
-                                <h3>서대문구핵주먹</h3>
-                                <p>서울 서대문구 <span>작성일 : (오늘날짜)</span></p>
-                            </div>
+                        <div class="title">
+                            <h3>모임 만들기</h3>
                         </div>
                         <div class="moim-review">
                             <form action="" method="POST" class="review-form">
                                 <label for="review-title" class="block">모임명 : </label><input type="text" name="title" id="review-title" class="review-input" placeholder="모임명 입력" required>
-                                <label for="review-content" class="block">리뷰내용 : </label><textarea name="content" id="review-content" placeholder="리뷰 내용을 입력해주세요!" required></textarea>
+                                <label for="review-content" class="block">모임내용 : </label><textarea name="content" id="review-content" placeholder="모임 내용을 입력해주세요" required></textarea>
+                                <label for="review-location" class="block">모임위치 : </label><input type="text" name="location" id="review-location" class="review-input" placeholder="모임 위치를 알려주세요." required>
+                                <label for="review-people" class="block">인원제한 : </label>
+                                <input type="radio" id="no-limit" name="limit-check" value="제한없음"><label for="no-limit" class="inline-block">제한없음</label> <br>
+                                <input type="radio" id="limit" name="limit-check" value="제한있음"><label for="limit" class="inline-block">제한있음</label>
+                                <input type="text" placeholder="직접 입력">
                                 <div class="create-comment">
                                     <div class="button-area">
                                         <button class="btn cancel" type="reset">

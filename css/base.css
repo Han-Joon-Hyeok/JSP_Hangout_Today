@@ -647,13 +647,19 @@ a.off{
 
 /* review-edit.html */
 
-input#review-title{
+input.review-input{
     padding: 5px;
     width: 550px;
 }
 
-.review-form label{
+.review-form label.block{
     display: block;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.review-form label.inline-block{
+    display: inline-block;
     margin: 10px 0;
 }
 
@@ -662,4 +668,10 @@ input#review-title{
     height: 300px;
     padding: 5px;
     resize: none;
+}
+
+/* moim-edit.html */
+
+.review .title h3{
+    margin: 0 auto;
 }
