@@ -230,9 +230,6 @@ section {
 
     .today .item{
         background-color: #ffffff;
-    }
-
-    .item {
         border: 1px black solid;
         border-radius: 10px;
         text-align: center;
@@ -240,6 +237,7 @@ section {
         height: 220px;
         padding: 50px 0;
     }
+
         .item .icon{
             font-size: 32px;
         }
@@ -255,7 +253,7 @@ section {
             color: #555555;
         }
     
-        .item p{
+        .item p, .list-item p{
             color: #ff0000;
             margin-top: 10px;
             font-size: 12px;
@@ -263,6 +261,10 @@ section {
 
     .slick-current[aria-hidden="false"]{
         cursor: pointer;
+    }
+
+    .slick-current[aria-hidden="false"] .item:hover{
+        background-color: #e6e6e6;
     }
 
     .today button.map{
@@ -475,4 +477,14 @@ label.radio{
 input.edit[type="radio"]{
     appearance: none;
     background-color: #999999;
+}
+
+/* category.html */
+
+a.selected{
+    color: #0085FE;
+}
+
+a.off{
+    color: #3B3030;
 }
