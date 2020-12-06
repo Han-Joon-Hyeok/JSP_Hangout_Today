@@ -1,0 +1,110 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘머해 : 마이페이지</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon big">🏃‍♂️</span>
+            <span><a href="main.html">노는게 제일 좋아!</a></span>
+        </div>
+        <nav>
+            <div class="login">
+                <a href="#"><h2>로그인</h2></a>
+            </div>
+            <div id="line-wrapper">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="menu">
+                <a href="main.html"><span class="icon big">🏠</span>홈으로</a>
+                <a href="mypage.html"><span class="icon big">📄</span>마이페이지</a>
+                <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
+            </div>
+    </header>
+    <section>
+        <div id="main-wrapper" class="pink-box">
+            <div id="login-wrapper">
+                <div id="title">
+                    <h1>마이페이지</h1>
+                </div>
+                <div class="login-box">
+                    <h3>지역</h3>
+                    <input type="text" name="address" placeholder="사는 지역" readonly>
+                </div>
+                <div class="login-box">
+                    <h3>관심사</h3>
+                    <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                </div>
+                <div class="login-box">
+                    <h3>최근 참여 모임</h3>
+                    <table class="white-table">
+                        <tr>
+                            <th>일시</th>
+                            <th>모임명</th>
+                            <th>인원</th>
+                        </tr>
+                        <tr>
+                            <td>20.10.19</td>
+                            <td>집에서 즐기는 할로윈</td>
+                            <td>6명</td>
+                        </tr>
+                        <tr>
+                            <td>20.10.30</td>
+                            <td>님만 오면 시작 : 롤 5인큐</td>
+                            <td>5명</td>
+                        </tr>
+                        <tr>
+                            <td>20.11.04</td>
+                            <td>다같이 모여 어몽어스</td>
+                            <td>8명</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="login-box">
+                    <h3>관심 모임</h3>
+                    <table class="white-table">
+                        <tr>
+                            <th>일시</th>
+                            <th>모임명</th>
+                            <th>인원</th>
+                        </tr>
+                        <tr>
+                            <td>20.12.08</td>
+                            <td>팀플발표 헤쳐모여</td>
+                            <td>3명</td>
+                        </tr>
+                        <tr>
+                            <td>20.12.12</td>
+                            <td>협곡 데이트 ㄱㄱ</td>
+                            <td>2명</td>
+                        </tr>
+                        <tr>
+                            <td>20.12.18</td>
+                            <td>종강기념 파티(온라인)</td>
+                            <td>8명</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="create-box">
+                    <button type="submit" class="black-btn"><a href="edit.html">정보수정</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">
+            Copyright ⓒ 오래다녔조 <br><br>
+            2020-2학기 [객체지향언어] 팀프로젝트 <br><br>
+            김영웅 송원준 한준혁
+        </p>
+    </footer>
+    <script src="js/base.js"></script>
+</body>
+</html>
