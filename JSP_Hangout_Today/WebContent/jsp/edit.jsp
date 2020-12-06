@@ -1,34 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오늘머해 : 정보수정</title>
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <span class="icon big">🏃‍♂️</span>
-            <span><a href="main.html">노는게 제일 좋아!</a></span>
-        </div>
-        <nav>
-            <div class="login">
-                <a href="#"><h2>로그인</h2></a>
-            </div>
-            <div id="line-wrapper">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div id="menu">
-                <a href="#"><span class="icon big">🏠</span>홈으로</a>
-                <a href="#"><span class="icon big">📄</span>마이페이지</a>
-                <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
-            </div>
-    </header>
+    
+<%@ include file='header.jsp' %>
+
     <section>
         <div id="main-wrapper" class="pink-box">
             <div id="login-wrapper">
@@ -74,13 +48,5 @@
             </div>
         </div>
     </section>
-    <footer>
-        <p class="copyright">
-            Copyright ⓒ 오래다녔조 <br><br>
-            2020-2학기 [객체지향언어] 팀프로젝트 <br><br>
-            김영웅 송원준 한준혁
-        </p>
-    </footer>
-    <script src="js/base.js"></script>
-</body>
-</html>
+    
+<%@ include file='footer.jsp' %>

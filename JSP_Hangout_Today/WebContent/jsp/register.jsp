@@ -1,208 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오늘머해 : 모임 게시판</title>
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <span class="icon big">🏃‍♂️</span>
-            <span><a href="main.html">노는게 제일 좋아!</a></span>
-        </div>
-        <nav>
-            <div class="login">
-                <a href="login.html"><h2>로그인</h2></a>
-            </div>
-            <div id="line-wrapper">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div id="menu">
-                <a href="main.html"><span class="icon big">🏠</span>홈으로</a>
-                <a href="mypage.html"><span class="icon big">📄</span>마이페이지</a>
-                <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
-            </div>
-    </header>
-    <section>
-        <div id="main-wrapper">
-            <div id="title">
-                <h1>오늘머해?</h1>
-                <h3>취향 및 위치 기반 실시간 소모임</h3>
-            </div>
+<%@ include file='header.jsp' %>
 
-            <div class="today category">
-                <div class="title">
-                    <div class="title-left">
-                        <h4>게시판 목록</h4>
-                        <h5>
-                            <a href="moim.html" class="off">모임 게시판</a>
-                            <a href="review.html" class="selected">리뷰 게시판</a>
-                        </h5>
-                    </div>
-                    <div class="title-right">
-                        <button class="map"><a href="review-edit.html">✍ 리뷰 작성하기</a></button>
-                    </div>
+ <section>
+        <div id="main-wrapper" class="pink-box">
+            <div id="login-wrapper">
+                <div id="title">
+                    <h1>회원가입</h1>
                 </div>
-                <div class="moim-wrapper">
-                    <div class="list-item moim">
-                        <span class="icon">📕</span>
-                        <h3>독서</h3>
-                        <h4>마음의 양식을 쌓아보아요</h4>
-                        <p>40개 모임</p>
+                <form action="" method="POST">
+                    <div class="login-box">
+                        <h3>아이디</h3>
+                        <input type="text" name="id" placeholder="ID">
+                        <button class="black-btn">중복체크</button>
                     </div>
-                </div>
-                <div class="category-list">
-                    <div class="review">
-                        <div class="user-info">
-                            <div class="icon-area">
-                                <span class="icon">👱‍♂️</span>
-                            </div>
-                            <div class="user-area">
-                                <h3>서대문구핵주먹</h3>
-                                <p>서울 서대문구 <span>작성일 : 2020.11.16</span></p>
-                            </div>
-                        </div>
-                        <div class="moim-review">
-                            <h3>모임명 : <span>[다함께 모여서 빡독!]</span></h3>
-                            <hr>
-                            <p>
-                                이번에 모임에 처음 참여해봤는데, 너무 재미있었어요! 다음에도 이런 모임 있으면 꼭 가려구요! 다른 분들도 다함께 모여서 놀아봐요!
-                            </p>
-                        </div>
-                        <div class="user-response">
-                            <div class="icon-area">
-                                <span class="icon like"></span>
-                                <span>좋아요 <span class="like">3</span></span>
-                                <span>댓글 <span class="comment">2</span></span>
-                            </div>
-                            <div class="comments">
-                                <div class="user">
-                                    <div class="icon-area">
-                                        <span class="icon">😍</span>
-                                    </div>
-                                    <div class="user-area">
-                                        <span class="user-name">불암산다람쥐</span>
-                                        <span class="time">3시간 전</span>
-                                        <p class="content">핵주먹님 실물영접해서 영광이었습니다ㅎㅎ 다음에 또 뵈요!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comments">
-                                <div class="user">
-                                    <div class="icon-area">
-                                        <span class="icon">😂</span>
-                                    </div>
-                                    <div class="user-area">
-                                        <span class="user-name">은평구전기톱</span>
-                                        <span class="time">1시간 전</span>
-                                        <p class="content">만나서 너무 반가웠어요! 자주 뵐 수 있으면 좋겠어요 ㅎㅎ</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="create-comment">
-                                <form action="">
-                                    <div class="icon-area">
-                                        <span class="icon">🤗</span>
-                                        <input type="text" placeholder="댓글 추가하기" class="input-comment">
-                                    </div>
-                                    <div class="button-area">
-                                        <button class="btn cancel" type="reset">
-                                            취소
-                                        </button>
-                                        <button class="btn submit" type="submit">
-                                            작성
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                    <div class="login-box">
+                        <h3>닉네임</h3>
+                        <input type="text" name="id" placeholder="ID">
+                    </div>
+                    <div class="login-box">
+                        <h3>비밀번호</h3>
+                        <input type="password" name="password" placeholder="PASSWORD">
+                    </div>
+                    <div class="login-box">
+                        <h3>비밀번호 확인</h3>
+                        <input type="password" name="password_confirm" placeholder="PASSWORD 재입력">
+                    </div>
+                    <div class="login-box">
+                        <h3>성별</h3>
+                        <div class="select">
+                            <label class="radio"><input type="radio" class="radio" value="male" name="sex"> 🙋‍♂남</label>
+                            <label class="radio"><input type="radio" class="radio" value="female" name="sex">🙋여</label>
                         </div>
                     </div>
-
-                    <div class="review">
-                        <div class="user-info">
-                            <div class="icon-area">
-                                <span class="icon">👱‍♂️</span>
-                            </div>
-                            <div class="user-area">
-                                <h3>미국산코알라</h3>
-                                <p>경기도 오산시 <span>작성일 : 2020.12.07</span></p>
-                            </div>
-                        </div>
-                        <div class="moim-review">
-                            <h3>모임명 : <span>[꽐라와 콜라 중 택1을 해라 너]</span></h3>
-                            <p>
-                                너무 의미있는 모임이었어요 :) 요즘은 코로나 때문에 모이기 많이 힘들어서 소규모로 진행되서 오히려 좋았던 것 같아요!
-                            </p>
-                        </div>
-                        <div class="user-response">
-                            <div class="icon-area">
-                                <span class="icon like"></span>
-                                <span>좋아요 <span class="like">0</span></span>
-                                <span>댓글 <span class="comment">0</span></span>
-                            </div>
-                        
-                            <div class="create-comment">
-                                <form action="">
-                                    <div class="icon-area">
-                                        <span class="icon">🤗</span>
-                                        <input type="text" placeholder="댓글 추가하기" class="input-comment">
-                                    </div>
-                                    <div class="button-area">
-                                        <button class="btn cancel" type="reset">
-                                            취소
-                                        </button>
-                                        <button class="btn submit" type="submit">
-                                            작성
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="login-box">
+                        <h3>생년월일</h3>
+                        <input type="date" name="birthdate">
                     </div>
-                </div>
+                    <div class="login-box">
+                        <h3>Email</h3>
+                        <input type="email" name="email" placeholder="EMAIL">
+                    </div>
+                    <div class="login-box">
+                        <h3>지역</h3>
+                        <input type="text" name="address" placeholder="구 단위까지 입력">
+                    </div>
+                    <div class="login-box">
+                        <h3>관심사</h3>
+                        <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                    </div>
+                    <div class="create-box">
+                        <input type="submit" class="black-btn" value="가입하기">
+                    </div>
+                </form>
             </div>
-
         </div>
     </section>
     
     
-    <footer>
-        <p class="copyright">
-            Copyright ⓒ 오래다녔조 <br><br>
-            2020-2학기 [객체지향언어] 팀프로젝트 <br><br>
-            김영웅 송원준 한준혁
-        </p>
-    </footer>
-
-    <a id="TOP_BTN" href="#">👆</a>
-    
-    <script src="js/base.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="js/category.js"></script>
-    <script src="js/review.js"></script>
-
-    <script>
-        $(function(){
-            $(window).scroll(function(){
-                if ($(this).scrollTop() > 100){
-                    $("#TOP_BTN").fadeIn();
-                }
-                else{
-                    $("#TOP_BTN").fadeOut();
-                }
-            });
-
-            $("#TOP_BTN").on('click', function(){
-                $('html, body').stop().animate({scrollTop:0}, 1000);
-                return false;
-            });
-        });
-    </script>
-</body>
-</html>
+<%@ include file='footer.jsp' %>
