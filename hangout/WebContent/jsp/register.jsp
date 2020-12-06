@@ -8,7 +8,7 @@
                 <div id="title">
                     <h1>회원가입</h1>
                 </div>
-                <form action="" method="POST">
+                <form action="signup.jsp" method="POST">
                     <div class="login-box">
                         <h3>아이디</h3>
                         <input type="text" name="id" placeholder="ID">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="login-box">
                         <h3>닉네임</h3>
-                        <input type="text" name="id" placeholder="ID">
+                        <input type="text" name="name" placeholder="ID">
                     </div>
                     <div class="login-box">
                         <h3>비밀번호</h3>
@@ -29,13 +29,13 @@
                     <div class="login-box">
                         <h3>성별</h3>
                         <div class="select">
-                            <label class="radio"><input type="radio" class="radio" value="male" name="sex"> 🙋‍♂남</label>
-                            <label class="radio"><input type="radio" class="radio" value="female" name="sex">🙋여</label>
+                            <label class="radio"><input type="radio" class="radio" value="m" name="sex"> 🙋‍♂남</label>
+                            <label class="radio"><input type="radio" class="radio" value="f" name="sex">🙋여</label>
                         </div>
                     </div>
                     <div class="login-box">
                         <h3>생년월일</h3>
-                        <input type="date" name="birthdate">
+                        <input type="date" name="bday">
                     </div>
                     <div class="login-box">
                         <h3>Email</h3>
@@ -43,11 +43,11 @@
                     </div>
                     <div class="login-box">
                         <h3>지역</h3>
-                        <input type="text" name="address" placeholder="구 단위까지 입력">
+                        <input type="text" name="addr" placeholder="구 단위까지 입력">
                     </div>
                     <div class="login-box">
                         <h3>관심사</h3>
-                        <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                        <input type="text" name="category" placeholder="어떤 관심사든 OK">
                     </div>
                     <div class="create-box">
                         <input type="submit" class="black-btn" value="가입하기">
