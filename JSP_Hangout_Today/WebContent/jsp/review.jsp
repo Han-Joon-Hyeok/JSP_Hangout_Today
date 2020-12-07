@@ -144,5 +144,7 @@
         </div>
     </section>
     
+    <script src="../js/review.js"></script>
+    
     
 <%@ include file='footer.jsp' %>

@@ -3,6 +3,7 @@
     
 <%@ include file='header.jsp' %>
 
+
     <section>
         <div id="main-wrapper">
             <div id="title">
@@ -32,7 +33,7 @@
                     </div>
                 </div>
                 <div class="category-list">
-                    <div class="list-item post">
+                    <%-- <div class="list-item post">
                         <span class="icon">👩</span>
                         <h3>경기도 파주시 금촌2동</h3>
                         <h4>렘브란트와 고대 미술사에 관해서</h4>
@@ -79,7 +80,31 @@
                         <h3>전라남도 목포시 용당2동</h3>
                         <h4>같이 책 읽어요 :)</h4>
                         <p>(2020.11.22 18:00~20:00)</p>
+                    </div> --%>
+                    <div class="list-item post">
+                    	<span class="icon">🦸‍♂️</span>
+                        <h3>전라남도 목포시 용당2동</h3>
+                        <h4>같이 책 읽어요 :)</h4>
+                        <p>(2020.11.22 18:00~20:00)</p>
+                    	<div class="black-bg">
+                    		<div class="modal-wrap">
+                    			<div class="modal-close">
+                    				<a href="">close</a>
+                    			</div>
+	                    		<div class="modal-content">
+	                    			<form method="POST" action="moim-submit.jsp">
+	                    				<label for="review-title" class="block">모임 주최자 : </label><input type="text" name="title" id="review-title" class="" value="" readonly>
+                                    	<label for="review-content" class="block">모임내용 : </label><textarea name="content" id="review-content" readonly ></textarea>
+                                    	<label for="review-location" class="block">모임위치 : </label><input type="text" name="location" id="review-location" class=""  readonly>
+                                    	<label for="review-people" class="block">인원현황 : </label> <input type="text" readonly>
+                                    	<input class="black-btn" type="submit" value="신청하기">
+	                    			</form>
+	                    			
+	                    		</div>
+                    		</div>
+                    	</div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -89,5 +114,33 @@
         </div>
     </section>
     
+    <script>
+ 	
+   	 function popUp() {
+   		 this.querySelector(".black-bg").classList.add("on");
+   		 this.querySelector(".modal-wrap").classList.add("on");
+	 }   
+   	    
+   	 function popClose() {
+   		
+   		//var post = this.parentNode.parentNode.parentNode;
+   		//console.log(post.querySelector(".black-bg"));
+   		//post.querySelector(".black-bg").classList.remove("on");
+   		//post.querySelector(".modal-wrap").close();
+   		
+ 	 }
+
+     var posts = document.querySelectorAll('.list-item.post');
+     
+     var modal = document.querySelectorAll('.mordal_wrap');
+     var black_bg = document.querySelectorAll('.black-bg');
+     
+     for(let i=0; i<posts.length; i++){
+         posts[i].addEventListener('click', popUp);
+         close_btn = posts[i].querySelector(".modal-close");
+         close_btn.addEventListener('click', popClose);
+     }
+     
+	</script>
     
 <%@ include file='footer.jsp' %>

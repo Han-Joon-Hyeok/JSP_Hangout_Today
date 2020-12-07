@@ -69,8 +69,10 @@ public class userInfoDAO {
 	// 로그인
 	public String[] login(String uid, String pwd) throws ClassNotFoundException, SQLException {
 		
-		String[] Result = new String[2];
+		String[] Result = new String[3];
 		String name;
+		String addr;
+		
 		Result[0] ="false";
 		
 		sql = "select * from hangout_user where uid = ? and pwd = ?";
@@ -83,7 +85,10 @@ public class userInfoDAO {
 		if(rs.next()) {
 			Result[0] = "true";
 			name = rs.getString("name");
+			addr = rs.getString("addr");
 			Result[1] = name;
+			Result[2] = addr;
+			
 		}
 		close();
 		
@@ -91,10 +96,10 @@ public class userInfoDAO {
 	}
 	
 	// UID 중복확인
-	public boolean confrimID(String uid) throws ClassNotFoundException, SQLException {
+	public boolean confirmID(String uid) throws ClassNotFoundException, SQLException {
 		
 		boolean result = false;
-		String sql = "select user_id from hangout_user where uid = ?";
+		String sql = "select uid from hangout_user where uid = ?";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);
@@ -109,6 +114,27 @@ public class userInfoDAO {
 		return result;
 	
 	}
+	
+	// Email 중복확인
+	
+	public boolean confirmEmail(String email) throws ClassNotFoundException, SQLException {
+		
+		boolean result = false;
+		String sql = "select email from hangout_user where email = ?";
+		
+		conn = getConn();
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, email);
+		rs = psmt.executeQuery();
+		if( rs.next()) {
+			result = true;
+		}
+
+		close();
+		
+		return result;
+	}
+	
 	
 	// ID 찾기
 	public String[] findUId(String email) throws ClassNotFoundException, SQLException {
@@ -162,6 +188,19 @@ public class userInfoDAO {
 		return Result;
 		
 	}
+	
+	// 정보수정 페이지 DB 연동
+		public ResultSet viewInfo(String uid) throws ClassNotFoundException, SQLException {
+			sql = "select sex, bday, email from hangout where uid = ?";
+			
+			conn = getConn();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, uid);
+			rs = psmt.executeQuery();
+			
+			return rs;
+
+		}
 	
 	
 }

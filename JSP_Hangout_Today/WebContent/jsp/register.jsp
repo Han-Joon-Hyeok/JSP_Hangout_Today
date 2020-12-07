@@ -8,11 +8,11 @@
                 <div id="title">
                     <h1>회원가입</h1>
                 </div>
-                <form name="userInfo" action="signup.jsp" method="POST">
+                <form name="userInfo" action="../function/signup.jsp" method="POST">
                     <div class="login-box">
                         <h3>아이디</h3>
-                        <input type="text" name="id" placeholder="ID">
-                        <button class="black-btn">중복체크</button>
+                        <input type="text" name="id" id="id" placeholder="ID">
+                        <input type="button" class="black-btn" onclick="confirmID();" value="중복체크">
                     </div>
                     <div class="login-box">
                         <h3>닉네임</h3>
@@ -39,7 +39,8 @@
                     </div>
                     <div class="login-box">
                         <h3>Email</h3>
-                        <input type="email" name="email" placeholder="EMAIL">
+                        <input type="email" id="email" placeholder="EMAIL">
+                        <input type="button" class="black-btn" onclick="confirmEmail();" value="중복체크">
                     </div>
                     <div class="login-box">
                         <h3>지역</h3>
@@ -57,5 +58,42 @@
         </div>
     </section>
     
+    <script type="text/javascript">
+    
+    	function confirmID(){
+    		
+    		var id = document.getElementById("id").value;
+    		
+    		if(id == ""){
+    			alert("ID를 입력하세요.");
+    			return;
+    		}
+    		
+    		else{
+    			url = "../function/confirmId.jsp?id=" + id;
+        		open(url, "confirm", "toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no, width=300, height=200");
+    		}
+    		
+    	}
+    	
+		function confirmEmail(){
+    		
+    		var email = document.getElementById("email").value;
+    		
+    		if(email == ""){
+    			alert("email을 입력하세요.");
+    			return;
+    		}
+    		
+    		else{
+    			url = "../function/confirmEmail.jsp?email=" + email;
+        		open(url, "confirm", "toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no, width=300, height=200");
+    		}
+    		
+    	}
+    	
+    	
+    
+    </script>
     
 <%@ include file='footer.jsp' %>

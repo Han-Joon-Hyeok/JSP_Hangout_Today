@@ -9,7 +9,7 @@
             <div id="title">
                 <h2>비밀번호 찾기</h2>
             </div>
-            <form action="find-pw-process.jsp" method="POST">
+            <form action="../function/find-pw-process.jsp" method="POST">
                 <div class="login-box">
                     <h3>아이디</h3>
                     <input type="text" name="id" placeholder="아이디 입력">

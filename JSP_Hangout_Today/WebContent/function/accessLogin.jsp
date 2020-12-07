@@ -16,6 +16,7 @@ request.setCharacterEncoding("utf-8");
 String uid = request.getParameter("id");
 String pwd = request.getParameter("password");
 String name;
+String addr;
 
 userInfoDAO dao = userInfoDAO.getInstance();
 
@@ -25,8 +26,10 @@ String[] result = dao.login(uid, pwd);
 <%
 if(result[0]=="true"){
 	name = result[1];
+	addr = result[2];
 	session.setAttribute("sessionID", uid);
 	session.setAttribute("name", name);
+	session.setAttribute("addr", addr);
 	response.sendRedirect("main.jsp");
 }else{%>
 <script>

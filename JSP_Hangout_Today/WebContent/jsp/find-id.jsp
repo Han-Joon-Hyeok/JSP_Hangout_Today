@@ -9,7 +9,7 @@
             <div id="title">
                 <h2>아이디 찾기</h2>
             </div>
-            <form action="find-id-process.jsp" method="POST">
+            <form action="../function/find-id-process.jsp" method="POST">
                 <div class="login-box">
                     <h3>이메일</h3>
                     <input type="email" name="email" placeholder="가입했던 이메일을 입력하세요.">
