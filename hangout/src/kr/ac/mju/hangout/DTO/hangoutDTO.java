@@ -6,8 +6,10 @@ public class hangoutDTO {
 	private String txt;
 	private String uid;
 	private String category;
-	private int personnel = 100;
+	private int personnel;
 	private String hdate;
+	private String htime;
+	private String pdatetime;
 
 	private static hangoutDTO dto = new hangoutDTO();
 	
@@ -48,8 +50,22 @@ public class hangoutDTO {
 	public String getHdate() {
 		return hdate;
 	}
-	public void setHdate(String hdate, String htime) {
-		this.hdate = hdate + " " + htime;
+	public void setHdate(String hdate) {
+		this.hdate = hdate;
 	}
+	
+
+	public String getHtime() {
+		return htime;
+	}
+
+	public void setHtime(String htime) {
+		this.htime = htime;
+	}
+	
+	public String getPdatetime() {
+		return pdatetime;
+	}
+
 
 }

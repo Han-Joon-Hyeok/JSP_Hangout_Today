@@ -44,9 +44,8 @@
                                 <label for="review-content" class="block">모임내용 : </label><textarea name="content" id="review-content" placeholder="모임 내용을 입력해주세요" required></textarea>
                                 <label for="review-location" class="block">모임위치 : </label><input type="text" name="location" id="review-location" class="review-input" placeholder="모임 위치를 알려주세요." required>
                                 <label for="review-people" class="block">인원제한 : </label>
-                                <input type="radio" id="no-limit" name="limit-check" value="0"><label for="no-limit" class="inline-block">제한없음</label> <br>
-                                <input type="radio" id="limit" name="limit-check" value="1"><label for="limit" class="inline-block">제한있음</label>
-                                <input type="text" name = "personnel" placeholder="직접 입력"><br>
+								<label>제한 인원 : </label>
+                                <input type="number" name = "personnel" placeholder="직접 입력" min = 2 max = 100><br><br>
                              	<label> 날짜 </label><input type="date" name = "hdate" ><br>
                              	<label> 시간 </label><input type="time" name = "htime" >
                              

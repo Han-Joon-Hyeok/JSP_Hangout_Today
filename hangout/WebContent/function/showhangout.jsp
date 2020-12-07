@@ -29,7 +29,6 @@ try{
 		<%=rs.getString("htime")%>
 <% 	}
 
-
 } catch(SQLException e) {
 out.print("exception : " + e.toString());
 }

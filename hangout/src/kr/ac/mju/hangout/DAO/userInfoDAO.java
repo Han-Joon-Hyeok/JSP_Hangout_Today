@@ -35,7 +35,7 @@ public class userInfoDAO {
 
 		String DB_URL = "jdbc:mysql://localhost:3306/teamproject?useSSL=false";
 		String user = "root";
-		 String pwd = "1234";
+		String pwd = "1234";
 
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(DB_URL, user, pwd);
@@ -68,9 +68,10 @@ public class userInfoDAO {
 	// 로그인
 	public String[] login(String uid, String pwd) throws ClassNotFoundException, SQLException {
 		
-		String[] result = new String[2];
+		String[] result = new String[3];
 		result[0] ="false";
 		result[1] = "";
+		result[2] = "";
 		
 		sql = "select * from hangout_user where uid = ? and pwd = ?";
 		
@@ -80,8 +81,9 @@ public class userInfoDAO {
 		psmt.setString(2, pwd);
 		rs= psmt.executeQuery();
 		if(rs.next()) {
-			result[0]= "true";
-			result[1]=rs.getString("name");
+			result[0] = "true";
+			result[1] = rs.getString("name");
+			result[2] = rs.getString("addr");
 		}
 		close();
 		
@@ -151,5 +153,16 @@ public class userInfoDAO {
 		
 	}
 	
+	public ResultSet viewInfo(String uid) throws ClassNotFoundException, SQLException {
+		sql = "select sex, bday, email from hangout where uid = ?";
+		
+		conn = getConn();
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, uid);
+		rs = psmt.executeQuery();
+		
+		return rs;
+
+	}
 	
 }

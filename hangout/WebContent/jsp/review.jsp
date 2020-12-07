@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ 
 <%@ include file='header.jsp' %>
 
     <section>
@@ -19,7 +20,7 @@
                         </h5>
                     </div>
                     <div class="title-right">
-                        <button class="map"><a href="review-edit.jsp">✍ 리뷰 작성하기</a></button>
+                        <button class="map" onclick="location.href='review-edit.jsp'">✍ 리뷰 작성하기</button>
                     </div>
                 </div>
                 <div class="moim-wrapper">
