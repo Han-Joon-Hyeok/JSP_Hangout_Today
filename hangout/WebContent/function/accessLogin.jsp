@@ -15,22 +15,25 @@ request.setCharacterEncoding("utf-8");
 
 String uid = request.getParameter("id");
 String pwd = request.getParameter("password");
+String name;
 
 userInfoDAO dao = userInfoDAO.getInstance();
 
-boolean result = dao.login(uid, pwd);
+String[] result = dao.login(uid, pwd);
 %>
 
 <%
-if(result){
+if(result[0]=="true"){
+	name = result[1];
 	session.setAttribute("sessionID", uid);
+	session.setAttribute("sessionNAME", name);
 	response.sendRedirect("../jsp/main.jsp");
 }else{%>
 <script>
 	alert("입력하신 정보가 틀립니다.");
 	</script>
 <% 
-response.sendRedirect("../jsp/main.jsp");
+
 }
 %>
 

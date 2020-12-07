@@ -66,9 +66,11 @@ public class userInfoDAO {
 	}
 
 	// 로그인
-	public boolean login(String uid, String pwd) throws ClassNotFoundException, SQLException {
+	public String[] login(String uid, String pwd) throws ClassNotFoundException, SQLException {
 		
-		boolean result = false;
+		String[] result = new String[2];
+		result[0] ="false";
+		result[1] = "";
 		
 		sql = "select * from hangout_user where uid = ? and pwd = ?";
 		
@@ -78,7 +80,8 @@ public class userInfoDAO {
 		psmt.setString(2, pwd);
 		rs= psmt.executeQuery();
 		if(rs.next()) {
-			result = true;
+			result[0]= "true";
+			result[1]=rs.getString("name");
 		}
 		close();
 		
