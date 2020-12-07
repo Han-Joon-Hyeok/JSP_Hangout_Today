@@ -45,7 +45,7 @@
 							</div>
 						</div>
 						<div class="moim-review">
-							<form action="" method="POST" class="review-form">
+							<form action="../function/addReview.jsp" method="POST" class="review-form">
 								<label for="review-title" class="block">모임명 : </label><input
 									type="text" name="title" id="review-title" class="review-input"
 									placeholder="모임명 입력" required> <label

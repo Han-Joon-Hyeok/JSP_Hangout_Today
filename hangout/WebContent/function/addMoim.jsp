@@ -20,12 +20,7 @@ dto.setUid((String)session.getAttribute("sessionID"));
 dto.setTitle(request.getParameter("title"));
 dto.setCategory(request.getParameter("category"));
 dto.setTxt(request.getParameter("content"));
-
-if(request.getParameter("limit-check") == "yes"){
-	dto.setPersonnel(Integer.parseInt(request.getParameter("personnel")));
-}else{
-	dto.setPersonnel(100);
-}
+dto.setPersonnel(Integer.parseInt(request.getParameter("personnel")));
 dto.setHdate(request.getParameter("hdate"));
 dto.setHtime(request.getParameter("htime"));
 

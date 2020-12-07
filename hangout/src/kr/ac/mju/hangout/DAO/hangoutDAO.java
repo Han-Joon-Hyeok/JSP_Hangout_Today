@@ -61,7 +61,7 @@ public class hangoutDAO {
 	
 	public ResultSet showHangout() throws ClassNotFoundException, SQLException {
 		
-		sql = "select * from hangout";
+		sql = "select title, txt, hdate, htime, personnel, name from hangout, hangout_user where hangout.uid=hangout_user.uid order by hdate asc";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);

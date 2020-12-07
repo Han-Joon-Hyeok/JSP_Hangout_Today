@@ -54,7 +54,6 @@ public class hangoutDTO {
 		this.hdate = hdate;
 	}
 	
-
 	public String getHtime() {
 		return htime;
 	}

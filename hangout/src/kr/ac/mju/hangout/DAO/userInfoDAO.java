@@ -154,7 +154,7 @@ public class userInfoDAO {
 	}
 	
 	public ResultSet viewInfo(String uid) throws ClassNotFoundException, SQLException {
-		sql = "select sex, bday, email from hangout where uid = ?";
+		sql = "select sex, bday, email from hangout_user where uid = ?";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);
