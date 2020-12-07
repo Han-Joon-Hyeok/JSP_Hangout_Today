@@ -39,12 +39,13 @@
                     </div>
                     <div class="login-box">
                         <h3>Email</h3>
-                        <input type="email" id="email" placeholder="EMAIL">
+                        <input type="email" name="email" id="email" placeholder="EMAIL">
                         <input type="button" class="black-btn" onclick="confirmEmail();" value="중복체크">
                     </div>
                     <div class="login-box">
                         <h3>지역</h3>
-                        <input type="text" name="addr" placeholder="구 단위까지 입력">
+                        <input type="text" name="addr" id="addr" placeholder="구 단위까지 입력">
+                        <input type="button" class="black-btn" value="주소찾기" onclick="addrFind()">
                     </div>
                     <div class="login-box">
                         <h3>관심사</h3>
@@ -95,5 +96,8 @@
     	
     
     </script>
+    
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="../js/addrFind.js"></script>
     
 <%@ include file='footer.jsp' %>

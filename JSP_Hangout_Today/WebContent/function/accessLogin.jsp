@@ -30,7 +30,7 @@ if(result[0]=="true"){
 	session.setAttribute("sessionID", uid);
 	session.setAttribute("name", name);
 	session.setAttribute("addr", addr);
-	response.sendRedirect("main.jsp");
+	response.sendRedirect("../jsp/main.jsp");
 }else{%>
 <script>
 	alert("입력하신 정보가 틀립니다.");

@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file='header.jsp' %>
-
+	
+	<%
+   		if(session.getAttribute("sessionID") == null ){
+   			response.sendRedirect("login.jsp");
+   		}
+   		else{
+  	%>
+	
     <section>
         <div id="main-wrapper" class="pink-box">
             <div id="login-wrapper">
@@ -72,5 +79,7 @@
             </div>
         </div>
     </section>
+    
+    <%} %>
     
 <%@ include file='footer.jsp' %>

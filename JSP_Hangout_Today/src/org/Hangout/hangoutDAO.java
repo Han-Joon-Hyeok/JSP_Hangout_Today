@@ -40,7 +40,7 @@ public class hangoutDAO {
 	
 	public void addHangout(hangoutDTO dto) throws ClassNotFoundException, SQLException {
 		
-		sql = "insert into hangout(uid, title, category, txt, personnel,hdate, htime) values (?,?,?,?,?,?,?)";
+		sql = "insert into hangout(uid, title, category, txt, personnel,hdate, htime, moim_addr) values (?,?,?,?,?,?,?,?)";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);
@@ -51,16 +51,17 @@ public class hangoutDAO {
 		psmt.setInt(5,dto.getPersonnel());
 		psmt.setString(6,dto.getHdate());
 		psmt.setString(7,dto.getHtime());
+		psmt.setString(8, dto.getAddr());
 		psmt.executeUpdate();
 		
 		psmt.close();
-		psmt.close();
+		conn.close();
 		
 	}
 	
 	public ResultSet showHangout() throws ClassNotFoundException, SQLException {
 		
-		sql = "select * from hangout";
+		sql = "select title, txt, hdate, htime, personnel, name, moim_addr from hangout, hangout_user where hangout.uid=hangout_user.uid order by hdate asc";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);

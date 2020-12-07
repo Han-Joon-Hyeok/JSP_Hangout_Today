@@ -119,7 +119,7 @@
                 </div>
             </div>
             
-            <button class="map-button" onclick="location.href='#'">
+            <button class="map-button" onclick="location.href='map.jsp'">
                 <h2>🗺모임지도 전체 보기</h2>
             </button>
 

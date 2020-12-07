@@ -10,6 +10,7 @@ public class hangoutDTO {
 	private String hdate;
 	private String htime;
 	private String pdatetime;
+	private String Addr;
 
 	private static hangoutDTO dto = new hangoutDTO();
 	
@@ -17,6 +18,14 @@ public class hangoutDTO {
 		return dto;
 	}
 	
+	public String getAddr() {
+		return Addr;
+	}
+
+	public void setAddr(String addr) {
+		this.Addr = addr;
+	}
+
 	public String getTitle() {
 		return title;
 	}

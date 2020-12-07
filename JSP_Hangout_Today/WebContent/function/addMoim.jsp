@@ -28,6 +28,7 @@ if(request.getParameter("limit-check") == "yes"){
 }
 dto.setHdate(request.getParameter("hdate"));
 dto.setHtime(request.getParameter("htime"));
+dto.setAddr(request.getParameter("addr"));
 
 
 %>
