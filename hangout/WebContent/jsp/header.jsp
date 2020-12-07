@@ -19,7 +19,7 @@
         </div>
         <nav>
             <div class="login">
-                <a href="login.jsp"><h2>로그인</h2></a>
+                <h2><a href="login.jsp">로그인</a></h2>
             </div>
             <div id="line-wrapper">
                 <div class="line"></div>
@@ -31,4 +31,5 @@
                 <a href="mypage.jsp"><span class="icon big">📄</span>마이페이지</a>
                 <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
             </div>
+            </nav>
     </header>
