@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import kr.ac.mju.hangout.DTO.hangoutDTO;
+
 public class hangoutDAO {
 	
 	private Connection conn = null;
@@ -14,9 +16,9 @@ public class hangoutDAO {
 	
 	private String sql = "";
 	
-	private hangoutDAO dao = new hangoutDAO();
+	private static hangoutDAO dao = new hangoutDAO();
 	
-	public hangoutDAO getInstance() {
+	public static hangoutDAO getInstance() {
 		return dao;
 	}
 	
@@ -35,6 +37,37 @@ public class hangoutDAO {
 		Connection conn = DriverManager.getConnection(DB_URL, user, pwd);
 
 		return conn;
+	}
+	
+	public void addHangout(hangoutDTO dto) throws ClassNotFoundException, SQLException {
+		
+		sql = "insert into hangout(uid, title, category, txt, personnel, htime) values (?,?,?,?,?,?)";
+		
+		conn = getConn();
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,dto.getUid());
+		psmt.setString(2,dto.getTitle());
+		psmt.setString(3,dto.getCategory());
+		psmt.setString(4,dto.getTxt());
+		psmt.setInt(5,dto.getPersonnel());
+		psmt.setString(6,dto.getHdate());
+		psmt.executeUpdate();
+		
+		psmt.close();
+		psmt.close();
+		
+	}
+	
+	public ResultSet showHangout() throws ClassNotFoundException, SQLException {
+		
+		sql = "select * from hangout";
+		
+		conn = getConn();
+		psmt = conn.prepareStatement(sql);
+		rs = psmt.executeQuery();
+		
+		return rs;
+		
 	}
 	
 }

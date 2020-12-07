@@ -31,6 +31,7 @@ if(result[0]=="true"){
 }else{%>
 <script>
 	alert("입력하신 정보가 틀립니다.");
+	location.href="../jsp/main.jsp""
 	</script>
 <% 
 
