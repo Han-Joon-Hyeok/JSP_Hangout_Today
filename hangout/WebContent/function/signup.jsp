@@ -31,7 +31,9 @@ userInfoDAO dao = userInfoDAO.getInstance();
 dao.addUser(dto);
 %>
 
-<jsp:forward page="main.html"></jsp:forward>
+<%
+response.sendRedirect("../jsp/main.jsp");
+%>
 
 </body>
 </html>

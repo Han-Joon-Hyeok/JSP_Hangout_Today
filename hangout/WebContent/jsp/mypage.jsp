@@ -14,7 +14,7 @@
                 </div>
                 <div class="login-box">
                     <h3>관심사</h3>
-                    <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                    <input type="text" name="address" placeholder="어떤 관심사든 OK" readonly>
                 </div>
                 <div class="login-box">
                     <h3>최근 참여 모임</h3>
@@ -67,7 +67,7 @@
                     </table>
                 </div>
                 <div class="create-box">
-                    <button type="submit" class="black-btn"><a href="edit.jsp">정보수정</a></button>
+                    <button class="black-btn" onclick="location.href='edit.jsp'">정보수정</button>
                 </div>
             </div>
         </div>

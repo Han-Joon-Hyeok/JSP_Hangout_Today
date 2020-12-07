@@ -89,7 +89,7 @@ public class userInfoDAO {
 	public boolean confrimID(String uid) throws ClassNotFoundException, SQLException {
 		
 		boolean result = false;
-		String sql = "select user_id from hangout_user where uid = ?";
+		String sql = "select uid from hangout_user where uid = ?";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);

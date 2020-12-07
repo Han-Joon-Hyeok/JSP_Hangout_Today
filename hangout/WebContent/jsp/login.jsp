@@ -9,7 +9,7 @@
                 <div id="title">
                     <h1>로그인</h1>
                 </div>
-                <form action="accessLogin.jsp" method="POST">
+                <form name ="login" action="../function/accessLogin.jsp" method="POST" onsubmit="return checkValue()">
                     <div class="login-box">
                         <h3>아이디</h3>
                         <input type="text" name="id" placeholder="ID">
@@ -36,5 +36,20 @@
             </div>
         </div>
     </section>
+
+<script type="text/javaScript">
+
+	function checkValue(){
+		if(!login.id.value ){
+			alert("id 를 입력하세요")
+			return false;
+		}
+		if(!login.password.value){
+			alert("pw를 입력하세요")
+			return false;
+		}
+	}
+	
+</script>
 
 <%@ include file='footer.jsp' %>

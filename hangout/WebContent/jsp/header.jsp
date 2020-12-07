@@ -18,9 +18,16 @@
             <span><a href="main.jsp">노는게 제일 좋아!</a></span>
         </div>
         <nav>
+        <%if(session.getAttribute("sessionID")==null){%>
             <div class="login">
                 <h2><a href="login.jsp">로그인</a></h2>
             </div>
+        <%}else {%>
+           <div class="login">
+                <h2><a href="../function/logout.jsp">로그아웃</a></h2>
+            </div>
+        <%} %>
+            
             <div id="line-wrapper">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -29,7 +36,7 @@
             <div id="menu">
                 <a href="main.jsp"><span class="icon big">🏠</span>홈으로</a>
                 <a href="mypage.jsp"><span class="icon big">📄</span>마이페이지</a>
-                <a href="#"><span class="icon big">🔥</span>오늘의 모임</a>
+                <a href="moim.jsp"><span class="icon big">🔥</span>오늘의 모임</a>
             </div>
             </nav>
     </header>

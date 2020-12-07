@@ -24,12 +24,14 @@ boolean result = dao.login(uid, pwd);
 <%
 if(result){
 	session.setAttribute("sessionID", uid);
-	response.sendRedirect("main.html");
+	response.sendRedirect("../jsp/main.jsp");
 }else{%>
 <script>
 	alert("입력하신 정보가 틀립니다.");
 	</script>
-<% }
+<% 
+response.sendRedirect("../jsp/main.jsp");
+}
 %>
 
 </body>
