@@ -395,6 +395,11 @@ footer {
     margin-bottom: 20px;
 }
 
+.login-box span.find-id{
+	color: #f09c8c;
+}
+
+
 .login-box input{
     padding: 20px;
     width: 275px;

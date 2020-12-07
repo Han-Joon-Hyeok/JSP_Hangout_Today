@@ -111,45 +111,55 @@ public class userInfoDAO {
 	}
 	
 	// ID 찾기
-	public boolean findUId(String email) throws ClassNotFoundException, SQLException {
+	public String[] findUId(String email) throws ClassNotFoundException, SQLException {
 		
-		boolean result = false;
+		String[] Result = new String[2];
+		Result[0] = "false";
+		String UId;
+		
 		sql = "select uid from hangout_user where email = ?";
-		psmt.setString(1, email);
 		
 		conn = getConn();
 		psmt =conn.prepareStatement(sql);
 		psmt.setString(1, email);
 		rs = psmt.executeQuery();
 		
-		if(rs.next()) result = true;
+		if(rs.next()) {
+			Result[0] = "true";
+			UId = rs.getString("uid");
+			Result[1] = UId;
+		}
 		
 		rs.close();
 		psmt.close();
-		
-		
-		return result;
+				
+		return Result;
 	}
 	
 	// 비밀번호 찾기
-	public boolean findPwd(String uid, String email) throws ClassNotFoundException, SQLException {
+	public String[] findPwd(String id, String email) throws ClassNotFoundException, SQLException {
 		
-		boolean result = false;
+		String[] Result = new String[2];
+		Result[0] = "false";
+		
 		sql = "select pwd from hangout_user where uid = ? and email = ?";
 		
 		conn = getConn();
 		psmt = conn.prepareStatement(sql);
-		psmt.setString(1, uid);
+		psmt.setString(1, id);
 		psmt.setString(2, email);
 		rs = psmt.executeQuery();
 		
-		if(rs.next()) result = true;
+		if(rs.next()) {
+			Result[0] = "true";
+			Result[1] = rs.getString("pwd");
+		}
 		
 		rs.close();
 		psmt.close();
 		conn.close();
 		
-		return result;
+		return Result;
 		
 	}
 	
