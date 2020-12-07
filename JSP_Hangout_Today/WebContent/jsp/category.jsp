@@ -93,4 +93,6 @@
         </div>
     </section>
     
+    <script src="../js/category.js"></script>
+    
 <%@ include file='footer.jsp' %>

@@ -9,7 +9,7 @@
                 <div id="title">
                     <h1>로그인</h1>
                 </div>
-                <form action="" method="POST">
+                <form action="accessLogin.jsp" method="POST">
                     <div class="login-box">
                         <h3>아이디</h3>
                         <input type="text" name="id" placeholder="ID">
