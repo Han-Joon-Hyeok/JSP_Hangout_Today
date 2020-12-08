@@ -69,9 +69,10 @@ public class userInfoDAO {
 	// 로그인
 	public String[] login(String uid, String pwd) throws ClassNotFoundException, SQLException {
 		
-		String[] Result = new String[3];
+		String[] Result = new String[4];
 		String name;
 		String addr;
+		String category;
 		
 		Result[0] ="false";
 		
@@ -86,8 +87,12 @@ public class userInfoDAO {
 			Result[0] = "true";
 			name = rs.getString("name");
 			addr = rs.getString("addr");
+			category = rs.getString("category");
+			
 			Result[1] = name;
 			Result[2] = addr;
+			Result[3] = category;
+			
 			
 		}
 		close();
@@ -191,7 +196,7 @@ public class userInfoDAO {
 	
 	// 정보수정 페이지 DB 연동
 		public ResultSet viewInfo(String uid) throws ClassNotFoundException, SQLException {
-			sql = "select sex, bday, email from hangout where uid = ?";
+			sql = "select * from hangout_user where uid = ?";
 			
 			conn = getConn();
 			psmt = conn.prepareStatement(sql);
@@ -199,8 +204,29 @@ public class userInfoDAO {
 			rs = psmt.executeQuery();
 			
 			return rs;
-
+	
 		}
+		
+	// 마이페이지 정보 수정 반영
+		public void editInfo(userInfoDTO dto) throws ClassNotFoundException, SQLException {
+			
+			sql = "update hangout_user set name = ?, pwd = ? , addr = ? , category = ? where uid = ?";
+			
+			conn = getConn();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getPwd());
+			psmt.setString(3, dto.getAddr());
+			psmt.setString(4, dto.getCategory());
+			psmt.setString(5, dto.getUid());
+			psmt.executeUpdate();
+			
+			psmt.close();
+			conn.close();
+		
+		}
+
+		
 	
 	
 }

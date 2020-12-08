@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class hangoutDAO {
@@ -14,6 +16,9 @@ public class hangoutDAO {
 	private ResultSet rs = null;
 	
 	private String sql = "";
+	private Date date = new Date();
+	private SimpleDateFormat today = new SimpleDateFormat("yyyy-MM-dd");
+	String getToday = today.format(date);
 	
 	private static hangoutDAO dao = new hangoutDAO();
 	
@@ -69,6 +74,19 @@ public class hangoutDAO {
 		
 		return rs;
 		
+	}
+	
+	public ResultSet showThumbnail() throws ClassNotFoundException, SQLException {
+		
+		
+		sql = "select title, txt, htime from hangout where hdate =  ? order by htime asc";
+		conn = getConn();
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, getToday);
+		rs = psmt.executeQuery();
+		
+		
+		return rs;
 	}
 	
 }

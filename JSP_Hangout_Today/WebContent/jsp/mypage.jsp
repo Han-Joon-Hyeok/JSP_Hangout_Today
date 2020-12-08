@@ -7,6 +7,8 @@
    			response.sendRedirect("login.jsp");
    		}
    		else{
+   			String addr = (String)session.getAttribute("addr");
+   			String category = (String)session.getAttribute("category");
   	%>
 	
     <section>
@@ -17,11 +19,11 @@
                 </div>
                 <div class="login-box">
                     <h3>지역</h3>
-                    <input type="text" name="address" placeholder="사는 지역" readonly>
+                    <input type="text" name="address" value="<%= addr %>" readonly>
                 </div>
                 <div class="login-box">
                     <h3>관심사</h3>
-                    <input type="text" name="address" placeholder="어떤 관심사든 OK">
+                    <input type="text" name="address" value="<%= category %>" placeholder="어떤 관심사든 OK" readonly>
                 </div>
                 <div class="login-box">
                     <h3>최근 참여 모임</h3>
