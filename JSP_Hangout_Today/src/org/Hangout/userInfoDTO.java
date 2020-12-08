@@ -13,7 +13,7 @@ public class userInfoDTO {
 	private String category;
 	private String addr;
 
-	static userInfoDTO  dto = new userInfoDTO();
+	private static userInfoDTO  dto = new userInfoDTO();
 	
 	public static userInfoDTO getInstance() {
 		return dto;
