@@ -29,9 +29,10 @@
 <%
 	userInfoDAO dao = userInfoDAO.getInstance();
 	dao.addUser(dto);
+	response.sendRedirect("../jsp/login.jsp");
 %>
 
-<jsp:forward page="main.jsp"></jsp:forward>
+
 
 </body>
 </html>

@@ -26,8 +26,8 @@
                     </div>
                 </form>
                 <div class="find">
-                    <a href="../function/find-id.jsp">아이디가 기억나지 않으시나요?</a>
-                    <a href="../function/find-pw.jsp">비밀번호 찾기</a>
+                    <a href="find-id.jsp">아이디가 기억나지 않으시나요?</a>
+                    <a href="find-pw.jsp">비밀번호 찾기</a>
                 </div>
                 <div class="create-box">
                     <p>아직 회원이 아니라면?</p>

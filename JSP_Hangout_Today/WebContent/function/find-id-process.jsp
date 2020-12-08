@@ -18,11 +18,11 @@
 	if(result[0] == "true"){
 		UId = result[1]; 
 		session.setAttribute("UId", UId);
-		response.sendRedirect("find-id-result.jsp");
+		response.sendRedirect("../jsp/find-id-result.jsp");
 	}else{%>
 	<script>
 		alert("입력하신 정보가 틀립니다. 이메일을 다시 입력해주세요.");
-		location.href="find-id.jsp";
+		location.href="../jsp/find-id.jsp";
 	</script>
 <% }
 

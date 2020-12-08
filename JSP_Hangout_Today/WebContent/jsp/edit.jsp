@@ -70,7 +70,8 @@ rs.close();
 				</div>
 				<div class="login-box">
 					<h3>지역</h3>
-					<input type="text" name="address" placeholder="<%= addr%>">
+					<input type="text" name="address" id="addr" placeholder="<%= addr%>">
+					<input type="button" class="black-btn" value="주소찾기" onclick="addrFind()">
 				</div>
 				<div class="login-box">
 					<h3>관심사</h3>
@@ -83,6 +84,9 @@ rs.close();
 		</div>
 	</div>
 </section>
+
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="../js/addrFind.js"></script>
 
 
 <%@ include file='footer.jsp'%>
