@@ -35,7 +35,7 @@ public class hangoutDAO {
 	public Connection getConn() throws ClassNotFoundException, SQLException {
 		String DB_URL = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
 		String user = "root";
-		String pwd = "gofhdsla1@";
+		String pwd = "";
 
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(DB_URL, user, pwd);
